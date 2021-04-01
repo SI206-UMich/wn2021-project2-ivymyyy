@@ -99,6 +99,7 @@ def summarize_best_books(filepath):
     category_list = []
     for x in summarizing_category:
         category_list.append(x.text.strip())   
+        
     #Finding Book Title 
     book_title_find_list = []
     book_title_list = []
@@ -107,7 +108,7 @@ def summarize_best_books(filepath):
         book_title_find_list.append(i)
     for y2 in book_title_find_list:
         book_title_list.append(y2.strip())
-            
+
     #Finding URL 
     url_find_list = []
     url_list = []
