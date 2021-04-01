@@ -95,11 +95,12 @@ def summarize_best_books(filepath):
     summarizing_category = soup.find_all('h4', class_='category__copy')
     summarizing_book_title = soup.find_all('div', class_='category__winnerImageContainer')
     summarizing_url = soup.find_all('div', class_='category clearFix')  
+    
     #Finding Category 
     category_list = []
     for x in summarizing_category:
         category_list.append(x.text.strip())   
-        
+
     #Finding Book Title 
     book_title_find_list = []
     book_title_list = []
