@@ -160,7 +160,6 @@ def extra_credit(filepath):
     pass
 
 class TestCases(unittest.TestCase):
-
     # call get_search_links() and save it to a static variable: search_urls
     search_urls = get_search_links()  
 
@@ -254,8 +253,10 @@ class TestCases(unittest.TestCase):
         write_csv(result, 'test.csv')  
 
         # read in the csv that you wrote (create a variable csv_lines - a list containing all the lines in the csv you just wrote to above)
-        f = open('test.csv', 'r')
-        csv_reader = csv.reader(f)
+        source_dir = os.path.abspath(os.path.dirname(__file__)) 
+        filepath = os.path.join(source_dir, 'test.csv')  
+        f = open(filepath, 'r')
+        csv_reader = csv.reader(f)  
         csv_lines = []  
         for i in csv_reader:
             csv_lines.append(i)   
